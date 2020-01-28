@@ -20,4 +20,6 @@ It was very challenging for me during this project. I really like to work this p
 In the future, I would like to make it possible to add more players and have an online version.
 
 ### Screenshots etc
+##### Desktop Version
+
 ![image](/images/dice_game_image.png)
