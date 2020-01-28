@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/2c4156236f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Dice Game</title>
+</head>
+
+<body>
+    <!-- game container starts -->
+    <div class="wrapper" class="clearFix">
+        <!-- play 1 container starts -->
+        <div class="player-0-panel active">
+            <div class="player-name" id="name-0">Player 1</div>
+            <div class="player-score" id="score-0">50</div>
+            <div class="player-current-box-1">
+                <div class="player-current-label">Points</div>
+                <div class="player-current-score" id="points-0">11</div>
+            </div>
+        </div>
+        <!-- play 1 container ends-->
+        <!-- play 2 container starts-->
+        <div class="player-1-panel">
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">50 </div>
+            <div class="player-current-box-2">
+                <div class="player-current-label">Points</div>
+                <div class="player-current-score" id="points-1">11</div>
+            </div>
+        </div>
+        <!-- play 2 container ends-->
+        <!-- button -->
+        <button class="btn-new">
+            <i class="fas fa-gamepad"> New Game</i>
+        </button>
+        <button class="btn-roll">
+            <i class="fas fa-dice"> Roll</i>
+        </button>
+        <button class="btn-hold">
+            <i class="fas fa-hand-paper"> Hold</i>
+        </button>
+        <input type="text" class="final-score" placeholder="Final Score">
+        <!-- <img src="/images/d-1.png" alt="Dice 1" class="dice" id="dice-1"> -->
+        <img src="/images/d-1.png" alt="Dice 4" class="dice" id="dice-1">
+
+    </div>
+    <!-- game container ends -->
+    <script src="/app.js"></script>
+</body>
+
+</html>

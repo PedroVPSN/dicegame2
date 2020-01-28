@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(62, 20, 20, .4), rgba(62, 20, 20, .4)), url(/images/dice_bg.jpg);
+    background-size: cover;
+    background-position: relative;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: white;
+    -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0px 10px 50px rgba(0, 0, 0, .3);
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, .3);
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+
+/* .clearFix {
+    clear: both;
+    display: table;
+    content: " ";
+} */
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+    background: darkgrey;
+    color: rgb(126, 98, 114);
+}
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    margin-bottom: 130px;
+    color: rgb(231, 118, 118);
+}
+
+.active {
+    background-color: #f7f7f7;
+}
+
+.active .player-name {
+    font-weight: 300px;
+    color: black;
+}
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 40px;
+    position: absolute;
+    color: red;
+    top: -7px;
+    right: 10px;
+}
+
+.player-current-box-1 {
+    background: rgb(240, 77, 77);
+    color: #ffffff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 13px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.player-current-box-2 {
+    background: rgb(240, 77, 77);
+    color: #ffffff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 13px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 40px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: "Lato";
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    -webkit-transition: background-color 0.5s ease, color 0.3s ease;
+    -moz-transition: background-color 0.5s ease, color 0.3s ease;
+    -ms-transition: background-color 0.5s ease, color 0.3s ease;
+    -o-transition: background-color 0.5s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+button:hover {
+    font-weight: 600;
+}
+
+button:hover i {
+    margin-right: 20px;
+    color: rgb(90, 130, 206);
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 15px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: 4px;
+    -webkit-transition: margin 0.3s ease;
+    -moz-transition: margin 0.3s ease;
+    -ms-transition: margin 0.3s ease;
+    -o-transition: margin 0.3s ease;
+    transition: margin 0.3s ease;
+}
+
+.btn-new {
+    top: 45px;
+}
+
+.btn-roll {
+    top: 405px;
+}
+
+.btn-hold {
+    top: 465px;
+}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100px;
+    -webkit-box-shadow: 0px 10px 60px rgba(0, 0, 0, .10);
+    -moz-box-shadow: 0px 10px 60px rgba(0, 0, 0, .10);
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, .10);
+}
+
+.winner {
+    background-color: #f7f7f7;
+}
+
+.winner .player-name {
+    font-weight: 300;
+    color: #EB4D4D;
+}
+
+#dice-1 {
+    top: 200px;
+    border-radius: 10px;
+}
+
+.final-score {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.final-score:focus {
+    outline: none;
+}
+
+@media all and (max-width: 860px) {
+    .wrapper {
+        width: 100vw;
+    }
+    .player-0-panel {
+        width: 50vw;
+    }
+    .player-1-pane {
+        width: 50vw;
+    }
+}
+
+@media all and (max-width: 415px) {
+    .wrapper {
+        width: 100vw;
+    }
+    .player-0-panel {
+        width: 50vw;
+    }
+    .player-1-pane {
+        width: 50vw;
+    }
+    .player-name {
+        font-size: 18px;
+        height: 50px;
+        width: fit-content;
+    }
+    #name-0 {
+        position: absolute;
+        left: 60px;
+        width: 70px;
+    }
+    .player-score {
+        position: absolute;
+        font-size: 50px;
+        width: fit-content;
+        top: 180px;
+    }
+    #score-0 {
+        position: absolute;
+        left: 80px;
+    }
+    #score-1 {
+        position: absolute;
+        right: 60px;
+    }
+    .active .player-name::after {
+        margin-right: 80px;
+    }
+    #dice-1 {
+        top: 220px;
+    }
+    .player-current-box-1 {
+        position: absolute;
+        top: 350px;
+        height: 90px;
+        width: fit-content;
+        left: 40px;
+    }
+    .player-current-box-2 {
+        position: absolute;
+        top: 350px;
+        height: 90px;
+        width: fit-content;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .player-0-panel {
+        width: 100vw;
+        height: 50vh;
+    }
+    .player-1-pane {
+        width: 100vw;
+        height: 50vh;
+    }
+    .final-score {
+        position: absolute;
+        top: 940px;
+    }
+    .player-current-box-2 {
+        position: absolute;
+        top: 815px;
+        right: 150px;
+        height: 90px;
+        width: fit-content;
+    }
+    #score-1 {
+        position: absolute;
+        top: 730px;
+        right: 170px
+    }
+}
